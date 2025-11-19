@@ -9,6 +9,10 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
+  base: "/dash-planilha-grafica/",   // <-- Adicionado
+  build: {
+    outDir: "docs",                  // <-- Adicionado
+  },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {
     alias: {
